@@ -1,0 +1,577 @@
+@font-face {
+    font-family: "AgRevueCyr Roman Medium";
+    src: url("fonts/agrevuecyr_romanmedium.eot");
+    src: url("fonts/agrevuecyr_romanmedium.eot?#iefix") format("embedded-opentype"),
+    url("fonts/agrevuecyr_romanmedium.woff") format("woff"),
+    url("fonts/agrevuecyr_romanmedium.ttf") format("truetype"),
+    url("fonts/agrevuecyr_romanmedium.woff2") format("woff2"),
+    url("fonts/agrevuecyr_romanmedium.otf") format("otf");
+}
+
+body {
+    width: 100%;
+}
+
+.item, li {
+    cursor: pointer;
+}
+
+.container {
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Шапка сайта */
+
+.header_main {
+    justify-content: space-around;
+    width: 100%;
+    height: 140px;
+    background: url("pics/granit.png");
+    display: flex;
+}
+
+.header_main .header {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .header_main {
+        height: 250px;
+    }
+
+    .header_main .header {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.header .logo {
+    width: 387px;
+    height: 77px;
+    background: url("pics/logo.png");
+
+}
+
+.header .search {
+    width: 365px;
+    height: 40px;
+    background: url("pics/search.png");
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header .search .search_input {
+    width: 250px;
+    height: 40px;
+    background-color: black;
+    border: 0;
+    border-radius: 25px 0 0 25px;
+    color: #FFFFFF;
+    padding-left: 20px;
+    opacity: 0.5;
+    font-size: 18px;
+}
+
+.header .search .search_input:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+.header .contacts_and_cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts_and_cart .contacts {
+    width: 221px;
+    height: 59px;
+    background: url("pics/contacts.png");
+    margin-right: 50px;
+}
+
+.contacts_and_cart .cart {
+    width: 48px;
+    height: 38px;
+    background: url("pics/mobile/cart_mob.png") no-repeat;
+    cursor: pointer;
+}
+
+/* Меню сайта */
+
+.menu_main {
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_main .menu {
+    width: 75%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu_main .menu > li {
+    font-family: "AgRevueCyr Roman Medium", Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #505050;
+    margin-top: 15px;
+    margin-right: 62px;
+    cursor: pointer;
+}
+
+.menu_main .geraldica {
+    width: 100%;
+    background: url("pics/1920x137ger.png") repeat-x;
+    height: 137px;
+}
+
+/* Содержимое сайта */
+
+.content_main {
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+}
+
+.content_main .content {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.content .aside_menu {
+    width: 18%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.content .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+/* Содержимое сайта: Боковое меню */
+
+.aside_menu .categories {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    justify-content: center;
+}
+
+.aside_menu .categories > ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aside_menu .categories > ul > li {
+    border: 1px solid #d0d0d0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #505050;
+    padding: 8px;
+}
+
+.aside_menu .categories > ul > li:first-child {
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    width: 100%;
+    line-height: 1.5;
+    background: url("pics/arrow.png") no-repeat right;
+    background-size: auto ;
+}
+
+
+
+/* Содержимое сайта: основной блок  */
+
+.main .notice, .notice_bottom, .description {
+    font-family: "Open Sans", sans-serif;
+    color: #505050;
+}
+
+.main .notice > h1, .notice_bottom > h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.notice_bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.notice_bottom > h1 {
+    color: #c68143;
+}
+
+.notice_bottom > p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    margin: 20px 0 20px 0;
+}
+
+.main .notice > p {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 15px 0 15px 0;
+}
+
+.main .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+    height: 800px;
+    margin-top: 15px;
+}
+
+.main .description > p {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 30px 0 30px 0;
+}
+
+.main .form_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+}
+
+.form_main .form_col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 78%;
+    height: 200px;
+}
+
+.form_main .form_col-1 > input {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+.form_col-1 > input, .form_col-2 > input {
+    outline:none;
+}
+
+.form_main .form_col-1 > input::-webkit-input-placeholder,
+.form_main .form_col-1 > textarea::-webkit-input-placeholder
+{
+    text-align: center;
+}
+
+
+.form_main .form_col-1 > input::-moz-placeholder,
+.form_main .form_col-1 > textarea::-moz-placeholder
+{
+    text-align: center;
+}
+
+.form_main .form_col-1 > textarea::-moz-placeholder,
+.form_main .form_col-1 > input::-moz-placeholder
+{
+    text-align: center;
+}
+.form_main .form_col-1 > textarea::-ms-input-placeholder,
+.form_main .form_col-1 > input::-ms-input-placeholder {
+    text-align: center;
+}
+
+
+.form_main .form_col-1 > input[ENGINE=’text’]::placeholder {
+    text-align: center;
+}
+
+.form_main .form_col-1 > textarea[ENGINE=’text’]::placeholder {
+    text-align: center;
+}
+
+.form_main .form_col-1 > textarea {
+    resize: none;
+    overflow: auto;
+    height: 40%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid lightgray;
+}
+
+
+.form_main .form_col-2 {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 20%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form_col-2 .submit {
+    width: 155px;
+    height: 62px;
+    background: url("pics/button_send.png") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+.item {
+    width: 100%;
+    height: 100%;
+}
+
+.item_1 {
+    background: url("pics/korziny.png") no-repeat;
+    background-size: cover;
+}
+
+.item_2 {
+    background: url("pics/venki.png") no-repeat;
+    background-size: cover;
+}
+
+.item_3 {
+    background: url("pics/excluzive.png") no-repeat;
+    background-size: cover;
+}
+
+.item_4 {
+    background: url("pics/prinadl.png") no-repeat;
+    background-size: cover;
+}
+
+.item_5 {
+    background: url("pics/textile.png") no-repeat;
+    background-size: cover;
+}
+
+.item_6 {
+    background: url("pics/kresty.png") no-repeat;
+    background-size: cover;
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+.item_7 {
+    background: url("pics/tombs.png") no-repeat;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+/* Подвал  */
+
+.map_main {
+    flex-basis: 100%;
+    background: url("pics/map.png");
+    background-size: cover;
+    margin-top: 50px;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-color: #c68143;
+
+}
+
+.map_main .map {
+    width: 75%;
+    height: 255px;
+}
+
+
+.footer_main {
+    justify-content: space-around;
+    width: 100%;
+    height: 260px;
+    background: url("pics/background_footer.png") no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+
+.footer_main .footer {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer .footer_logo {
+    width: 30%;
+    height: 220px;
+    background: url("pics/logo_footer.png") no-repeat;
+}
+
+.footer .footer_cats {
+    margin-left: 190px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer {
+    line-height: 1.8;
+    color: #FFFFFF;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 17px;
+}
+
+.footer .footer_nav {
+    margin-left: 190px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer .footer_cats > ul > li:first-child,
+.footer .footer_nav > ul > li:first-child
+{
+    font-family: "AgRevueCyr Roman Medium", Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.whatsapp {
+    position: fixed;
+    width: 98px;
+    height: 113px;
+    cursor: pointer;
+    background: url("pics/whatsApp.png");
+    right: 0;
+    transform: translateY(342%);
+}
+
+.menu_toggler_mobile {
+    display: none;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin: 5px 5px 10px -20px;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 0.5em;
+    background: url("pics/mobile/menu_toggler.png") no-repeat center center;
+    background-size: 100% 100%;
+
+
+}
+
+.custom-checkbox:checked+label::before {
+    border-color: #CDA578;
+    background-image: url("pics/mobile/menu_toggler.png");
+}
+
+
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+.custom-checkbox:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-checkbox:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+
+.custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+.custom-checkbox-one+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+
+}
+
+.custom-checkbox-one+label::before {
+    content: '';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid yellowgreen;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.form_main .form_col-1 > textarea::placeholder {
+    color: darkgrey;
+}
+
+.form_main .form_col-1 > input::placeholder {
+    color: darkgray;
+}

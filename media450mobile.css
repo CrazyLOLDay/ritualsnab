@@ -1,0 +1,218 @@
+@media screen and (max-width: 450px) {
+
+    .item, li {
+        cursor: pointer;
+    }
+
+    .header_main .header, .menu_main .menu, .content_main .content, .footer_main .footer {
+        width: 85%;
+    }
+
+    .header_main {
+        height: 250px;
+    }
+
+    .header_main .header {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu_item {
+        display: none;
+    }
+
+    .menu_main .menu {
+        justify-content: flex-start;
+        height: 70px;
+        margin-top: -15px;
+    }
+
+    .menu_main {
+        justify-content: flex-start;
+        height: 80px;
+    }
+
+    .menu_toggler_mobile {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .menu_main .geraldica {
+        width: 100%;
+        background: url("pics/mobile/venzel_mob.png") no-repeat;
+        background-size: cover;
+        height: 17px;
+        margin-top: -8px;
+    }
+
+    .header .logo {
+        width: 330px;
+        height: 70px;
+        background: url("pics/logo.png") no-repeat;
+        background-size: contain;
+        margin-top: 0;
+    }
+
+    .header_main {
+        height: 300px;
+    }
+
+    .menu_main .menu > li {
+        font-family: "Open Sans Semibold", Tahoma, sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #505050;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+
+    .content .aside_menu {
+        display: none;
+    }
+
+    .main .notice > h1 {
+        font-family: "Open Sans Extrabold", sans-serif;
+        font-size: 12px;
+    }
+
+    .main .notice > p, .main .description > p {
+        font-family: "Open Sans Semibold", sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: justify;
+    }
+
+    .main .notice > p {
+        margin-top: 30px;
+    }
+
+    .main .products {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 2000px;
+        margin-top: 15px;
+    }
+
+    .item_6 {
+        background: url("pics/mobile/crosses_mob.png") no-repeat;
+        background-size: cover;
+    }
+
+    .item_7 {
+        background: url("pics/mobile/tombs_mob.png") no-repeat;
+        background-size: cover;
+    }
+
+    .notice_bottom > h1 {
+        font-family: "Open Sans Semibold", sans-serif;
+        font-size: 24px;
+        color: #8c6d4c;
+    }
+
+    .notice_bottom > p {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.5;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 15px 0 15px 0;
+    }
+
+    .main .form_main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form_main .form_col-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
+    }
+
+    .form_main .form_col-2 {
+        justify-content: center;
+    }
+
+    .form_col-2 .submit {
+        margin-top: 15px;
+    }
+
+    .map_main {
+        background: url("pics/mobile/map_mobile.png");
+        border-top: 5px solid #c68143;
+        border-bottom: 5px solid #c68143;
+    }
+
+    .footer_main {
+        height: 320px;
+        background: url("pics/mobile/podval.png") no-repeat;
+        background-size: contain;
+    }
+
+    .footer_main .footer {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer .footer_logo {
+        display: none;
+    }
+
+    .footer {
+        color: #FFFFFF;
+        font-family: "Open Sans Light", sans-serif;
+        font-size: 12px;
+    }
+
+    .footer .footer_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -30px;
+        margin-left: -20px;
+    }
+
+
+    .footer .footer_cats {
+        margin-top: -10px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        margin-left: -10px;
+    }
+
+    .footer .footer_cats > ul > li:first-child,
+    .footer .footer_nav > ul > li:first-child
+    {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .footer .footer_cats > ul > li,
+    .footer .footer_nav > ul > li
+    {
+        font-family: "Open Sans Light", Tahoma, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .whatsapp {
+        width: 45px;
+        height: 41px;
+        background: url("pics/mobile/whatsapp_mob.png");
+        transform: translateY(892%);
+    }
+
+}
+
+
