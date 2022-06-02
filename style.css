@@ -8,12 +8,25 @@
     url("fonts/agrevuecyr_romanmedium.otf") format("otf");
 }
 
+:active, :hover, :focus, :checked, :visited {
+    outline: 0;
+    outline-offset: 0;
+}
+
 body {
     width: 100%;
 }
 
 .item, li {
     cursor: pointer;
+}
+
+.burger {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: #FFFFFF;
+    display: none;
 }
 
 .container {
@@ -58,9 +71,59 @@ body {
 }
 
 .header .logo {
-    width: 387px;
+    width: 390px;
     height: 77px;
-    background: url("pics/logo.png");
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo .logo_left > img {
+    width: 74px;
+    height: 62px;
+    margin-top: -5px;
+}
+
+.logo .logo_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 295px;
+    color: #FFFFFF;
+    height: 70px;
+}
+
+.main2 { display: none }
+
+.logo .logo_right .ritual_snab > p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 27px;
+    line-height: 30px;
+    font-weight: bold;
+    height: 38px;
+}
+
+.logo .logo_right .ritual_adress {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.logo .logo_right .ritual_adress > img {
+    margin-left: 2px;
+    height: 16px;
+    width: 12px;
+}
+
+.logo .logo_right .ritual_adress > p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: bold;
+    height: 25px;
+    margin-left: 15px;
 
 }
 
@@ -76,7 +139,7 @@ body {
 .header .search .search_input {
     width: 250px;
     height: 40px;
-    background-color: black;
+    background-color: #2a2a31;
     border: 0;
     border-radius: 25px 0 0 25px;
     color: #FFFFFF;
@@ -89,6 +152,13 @@ body {
 {
     outline: 0;
     outline-offset: 0;
+}
+
+.header .search .chomp {
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0.01;
+
 }
 
 .header .contacts_and_cart {
@@ -171,6 +241,7 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    margin-right: 40px;
 }
 
 .content .main {
@@ -187,7 +258,6 @@ body {
 .aside_menu .categories {
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
     justify-content: center;
 }
 
@@ -206,13 +276,17 @@ body {
     padding: 8px;
 }
 
-.aside_menu .categories > ul > li:first-child {
+.aside_menu .categories > .baskets > li:first-child,
+.aside_menu .categories > .wreaths > li:first-child,
+.aside_menu .categories > .textile > li:first-child,
+.aside_menu .categories > .tombs_and_crosses > li:first-child,
+.aside_menu .categories > .attributes > li:first-child {
     text-transform: uppercase;
     font-weight: 700 !important;
     width: 100%;
     line-height: 1.5;
     background: url("pics/arrow.png") no-repeat right;
-    background-size: auto ;
+
 }
 
 
@@ -252,17 +326,6 @@ body {
     font-size: 17px;
     line-height: 1.5;
     margin: 15px 0 15px 0;
-}
-
-.main .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    align-items: end;
-    justify-content: start;
-    width: 100%;
-    height: 800px;
-    margin-top: 15px;
 }
 
 .main .description > p {
@@ -356,50 +419,37 @@ body {
 }
 
 
-.item {
+
+.main .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     width: 100%;
-    height: 100%;
 }
 
-.item_1 {
-    background: url("pics/korziny.png") no-repeat;
-    background-size: cover;
+.main .products > img {
+    width: 100%;
 }
 
-.item_2 {
-    background: url("pics/venki.png") no-repeat;
-    background-size: cover;
-}
-
-.item_3 {
-    background: url("pics/excluzive.png") no-repeat;
-    background-size: cover;
-}
-
-.item_4 {
-    background: url("pics/prinadl.png") no-repeat;
-    background-size: cover;
-}
-
-.item_5 {
-    background: url("pics/textile.png") no-repeat;
-    background-size: cover;
-}
-
-.item_6 {
-    background: url("pics/kresty.png") no-repeat;
-    background-size: cover;
+.cross {
     grid-column: 3/4;
     grid-row: 2/4;
+    display: block;
 }
 
-.item_7 {
-    background: url("pics/tombs.png") no-repeat;
-    background-size: cover;
+.tombs {
     grid-column-start: 1;
     grid-column-end: 3;
+    display: block;
 }
 
+.cross_mob {
+    display: none;
+}
+
+.tombs_mob {
+    display: none;
+}
 
 /* Подвал  */
 
@@ -409,7 +459,6 @@ body {
     background-size: cover;
     margin-top: 50px;
     border-top: 5px;
-    border-bottom: 5px;
     border-color: #c68143;
 
 }
@@ -427,6 +476,8 @@ body {
     background: url("pics/background_footer.png") no-repeat;
     background-size: cover;
     display: flex;
+    border-top: 5px;
+    border-color: #c68143;
 }
 
 
@@ -436,31 +487,91 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
-.footer .footer_logo {
-    width: 30%;
-    height: 220px;
-    background: url("pics/logo_footer.png") no-repeat;
-}
-
-.footer .footer_cats {
-    margin-left: 190px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.footer {
     line-height: 1.8;
     color: #FFFFFF;
     font-family: "Open Sans Light", sans-serif;
     font-size: 17px;
 }
 
+.footer .footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer_logo .picture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.footer_logo .adresses .adress_mobile {
+    display: none;
+}
+
+.footer_logo .picture > img {
+    width: 74px;
+    height: 62px;
+}
+
+.footer_logo .picture > p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+.footer_logo .adresses {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.adresses .adress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.adresses .adress > img{
+    margin-left: 2px;
+    height: 16px;
+    width: 12px;
+}
+
+.adresses .adress > p {
+    font-family: "Open Sans R", sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    margin-left: 25px;
+}
+
+.footer_menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer_menus > div {
+    margin-left: 200px;
+}
+
+
+.footer .footer_cats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.adres_block_foo {
+    display: none;
+}
+
 .footer .footer_nav {
-    margin-left: 190px;
-    margin-top: -30px;
     display: flex;
     flex-direction: row;
     justify-content: center;

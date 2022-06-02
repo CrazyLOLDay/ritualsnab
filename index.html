@@ -11,19 +11,57 @@
     <link rel="stylesheet" href="media450mobile.css">
     <title>ООО "Ритуал Снаб"</title>
 </head>
+<script type="text/javascript">
+
+    function fnsearch() {
+        $('.main').fadeOut(300, function() {
+            $('.main2').fadeIn(300);
+        })
+    }
+</script>
 <body>
+<div class="burger">
+    <ul class="burger_menu">
+        <li class="menu_toggler_fullscreen">
+            <img src="pics/mobile/menu_toggler.png" alt="">
+        </li>
+        <li class="burger_menu_item">
+            <p>главная</p>
+        </li>
+        <li class="burger_menu_item">
+            <p>о компании</p>
+        </li>
+        <li class="burger_menu_item">
+            <p>оплата и доставка</p>
+        </li>
+        <li class="burger_menu_item">
+            <p>контакты</p>
+        </li>
+    </ul>
+</div>
 <div class="container">
     <div class="page">
         <div class="whatsapp">
-
         </div>
         <div class="header_main">
             <div class="header">
                 <div class="logo">
-
+                    <div class="logo_left">
+                        <img src="pics/mobile/part-logo.png" alt="logo">
+                    </div>
+                    <div class="logo_right">
+                        <div class="ritual_snab">
+                            <p>ООО "РИТУАЛ СНАБ"</p>
+                        </div>
+                        <div class="ritual_adress">
+                            <img src="pics/mobile/adress.png" alt="mark">
+                            <p>г. Хабаровск, ул. Суворова 77</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="search">
-                    <input type="text" class="search_input">
+                    <input onKeydown="Javascript: if (event.keyCode==13) fnsearch();" type="text" class="search_input">
+                    <p class="chomp" onclick="fnsearch()">поиск</p>
                 </div>
                 <div class="contacts_and_cart">
                     <div class="contacts">
@@ -37,12 +75,7 @@
         </div>
         <div class="menu_main">
             <ul class="menu">
-
-
-
-
-
-                <li class="menu_toggler_mobile">
+                <li class="menu_toggler_mobile togl_off">
                     <input type="checkbox" class="custom-checkbox" id="custom_checkbox">
                     <label for="custom_checkbox">МЕНЮ</label>
                 </li>
@@ -70,6 +103,8 @@
                     <div class="categories">
                         <ul class="tombs_and_crosses">
                             <li class="item item_11">Гробы и кресты</li>
+                        </ul>
+                        <ul class="tombs_items">
                             <li class="item item_12">- Гробы</li>
                             <li class="item item_13">- Кресты</li>
                         </ul>
@@ -83,6 +118,8 @@
                             <li class="item item_41">
                                 Ритуальный текстиль
                             </li>
+                        </ul>
+                        <ul class="textile_items">
                             <li class="item item_42">- Обвивка внутренняя</li>
                             <li class="item item_43">- Обвивка наружняя</li>
                             <li class="item item_44">- Комплекты в гроб</li>
@@ -95,6 +132,8 @@
                         </ul>
                         <ul class="attributes">
                             <li class="item item_51">Ритуальные принадлежности</li>
+                        </ul>
+                        <ul class="attributes_items">
                             <li class="item item_52">- Тесьма</li>
                             <li class="item item_53">- Лампады</li>
                             <li class="item item_54">- Вазы</li>
@@ -105,20 +144,30 @@
                         </ul>
                     </div>
                 </div>
+                <div class="main2">
+                    <h1>По вашему запросу ничего не найдено ...</h1>
+                    <a href="#" onclick="document.location.reload()">НАЗАД</a>
+                </div>
+
                 <div class="main">
                     <div class="notice">
                         <h1>Внимание! Только оптовая продажа!</h1>
                         <p>Наша компания является одной из крупнейших компаний, которые производят ритуальные венки оптом, принадлежности и комплектующие для изготовления ритуальных фонов, заготовок для венков. Мы предлагаем вашему вниманию приобрести любой из товаров, указанных на сайте, оптом.</p>
                     </div>
+
                     <div class="products">
-                        <div class="item item_1"></div>
-                        <div class="item item_2"></div>
-                        <div class="item item_3"></div>
-                        <div class="item item_4"></div>
-                        <div class="item item_5"></div>
-                        <div class="item item_6"></div>
-                        <div class="item item_7"></div>
+                        <img src="pics/korziny.png" alt="">
+                        <img src="pics/venki.png" alt="">
+                        <img src="pics/excluzive.png" alt="">
+                        <img src="pics/prinadl.png" alt="">
+                        <img src="pics/textile.png" alt="">
+                        <img class="tombs" src="pics/tombs.png" alt="">
+                        <img class="cross" src="pics/kresty.png" alt="">
+                        <img class="tombs_mob" src="pics/mobile/tombs_mob.png" alt="">
+                        <img class="cross_mob" src="pics/mobile/crosses_mob.png" alt="">
+
                     </div>
+
                     <div class="description">
                         <p>
                             В компании "Ритуал Снаб" работают высококвалифицированные специалисты, которые ценят время своих клиентов и готовы изменяться в ногу со временем. Мы осуществляем доставку всего ассортимента ритуальной продукции и гарантируем качественное выполнение заказа в максимальное удобные для вас сроки. Наш дружный коллектив всегда рад взаимному сотрудничеству и ценит каждого своего клиента.
@@ -154,26 +203,61 @@
         <div class="footer_main">
             <div class="footer">
                 <div class="footer_logo">
+                    <div class="picture">
+                        <img src="pics/mobile/part-logo.png" alt="">
+                        <p>ООО "РИТУАЛ СНАБ"</p>
+                    </div>
+                    <div class="adresses">
+                        <div class="adress">
+                            <img src="pics/mobile/adress.png" alt="">
+                            <p>г. Хабаровск. ул. Суворова 77</p>
+                        </div>
+                        <div class="adress">
+                            <img src="pics/mobile/phone.png" alt="">
+                            <p>8 924 304-68-00</p>
+                        </div>
+                        <div class="adress">
+                            <img src="pics/mobile/email.png" alt="">
+                            <p>ritualsnab.dv@mail.ru</p>
+                        </div>
+                        <div class="adress_mobile">
+                            <img src="pics/mobile/adress.png" alt="">
+                            <p>г. Хабаровск, ул. Суворова 77</p>
+                        </div>
+                    </div>
+                </div>
 
+
+                <div class="footer_menus">
+                    <div class="footer_cats">
+                        <ul>
+                            <li class="cats cats_1">Категории</li>
+                            <li class="cats cats_2">Венки</li>
+                            <li class="cats cats_3">Корзины</li>
+                            <li class="cats cats_4">Гробы и кресты</li>
+                            <li class="cats cats_5">Ритуальный текстиль</li>
+                            <li class="cats cats_6">Ритуальные принадлежности</li>
+                        </ul>
+                    </div>
+                    <div class="footer_nav">
+                        <ul>
+                            <li class="nav_items nav_item_1">Сайт</li>
+                            <li class="nav_items nav_item_2">Главная</li>
+                            <li class="nav_items nav_item_3">О компании</li>
+                            <li class="nav_items nav_item_4">Контакты</li>
+                            <li class="nav_items nav_item_5">Оплата и доставка</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer_cats">
-                    <ul>
-                        <li class="cats cats_1">Категории</li>
-                        <li class="cats cats_2">Венки</li>
-                        <li class="cats cats_3">Корзины</li>
-                        <li class="cats cats_4">Гробы и кресты</li>
-                        <li class="cats cats_5">Ритуальный текстиль</li>
-                        <li class="cats cats_6">Ритуальные принадлежности</li>
-                    </ul>
-                </div>
-                <div class="footer_nav">
-                    <ul>
-                        <li class="nav_items nav_item_1">Сайт</li>
-                        <li class="nav_items nav_item_2">Главная</li>
-                        <li class="nav_items nav_item_3">О компании</li>
-                        <li class="nav_items nav_item_4">Контакты</li>
-                        <li class="nav_items nav_item_5">Оплата и доставка</li>
-                    </ul>
+                <div class="adres_block_foo">
+                    <div class="adress">
+                        <img src="pics/mobile/phone.png" alt="">
+                        <p>8 924 304-68-00</p>
+                    </div>
+                    <div class="adress">
+                        <img src="pics/mobile/email.png" alt="">
+                        <p>ritualsnab.dv@mail.ru</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -185,6 +269,24 @@
 
 
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
 
+        $('.textile, .tombs_and_crosses, .attributes').on('click', function() {
+            $(this).next().toggle(100);
+        })
+
+        $('.tombs_items, .textile_items, .attributes_items').toggle(1);
+
+        $('.custom-checkbox').on('click', function() {
+            $('.burger').slideToggle(300);
+        });
+        $('.menu_toggler_fullscreen').on('click', function() {
+            $('.burger').slideToggle(300);
+        });
+    });
+
+</script>
 </body>
 </html>
