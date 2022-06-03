@@ -13,6 +13,10 @@
     outline-offset: 0;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     width: 100%;
 }
@@ -45,7 +49,8 @@ body {
     justify-content: space-around;
     width: 100%;
     height: 140px;
-    background: url("pics/granit.png");
+    background: url("pics/granit.png") no-repeat;
+    background-size: cover;
     display: flex;
 }
 
@@ -128,12 +133,13 @@ body {
 }
 
 .header .search {
-    width: 365px;
+    width: 355px;
     height: 40px;
     background: url("pics/search.png");
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-radius: 25px;
 }
 
 .header .search .search_input {
@@ -141,7 +147,7 @@ body {
     height: 40px;
     background-color: #2a2a31;
     border: 0;
-    border-radius: 25px 0 0 25px;
+    border-radius: 25px;
     color: #FFFFFF;
     padding-left: 20px;
     opacity: 0.5;
@@ -259,37 +265,37 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 .aside_menu .categories > ul {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
 }
 
-.aside_menu .categories > ul > li {
-    border: 1px solid #d0d0d0;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+.categories > ul > li {
     color: #505050;
     padding: 8px;
-}
-
-.aside_menu .categories > .baskets > li:first-child,
-.aside_menu .categories > .wreaths > li:first-child,
-.aside_menu .categories > .textile > li:first-child,
-.aside_menu .categories > .tombs_and_crosses > li:first-child,
-.aside_menu .categories > .attributes > li:first-child {
-    text-transform: uppercase;
-    font-weight: 700 !important;
     width: 100%;
     line-height: 1.5;
-    background: url("pics/arrow.png") no-repeat right;
-
+    border: 1px solid #d0d0d0;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f6f6f6;
 }
 
+.tombs_and_crosses > li, .baskets > li, .wreaths > li, .textile > li, .attributes > li {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    background: url("pics/arrow.png") no-repeat right;
+}
 
+.tombs_items > li, .textile_items > li, .attributes_items > li {
+    font-weight: 400;
+    font-size: 18px;
+}
 
 /* Содержимое сайта: основной блок  */
 

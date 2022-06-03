@@ -167,7 +167,7 @@
         font-family: "Open Sans Semibold", sans-serif;
         font-size: 12px;
         line-height: 16px;
-        text-align: justify;
+        text-align: left;
     }
 
     .main .notice > p {
@@ -313,6 +313,7 @@
     }
 
     .adres_block_foo {
+        display: block;
         align-self: flex-start;
         line-height: 1.5;
         width: 100%;
@@ -381,6 +382,7 @@
         font-family: "Open Sans Light", Tahoma, sans-serif;
         font-size: 14px;
         line-height: 1.5;
+        width: 90%;
     }
 
     .whatsapp {
